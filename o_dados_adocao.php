@@ -10,7 +10,8 @@ if (isset($_GET["adocao_codigo"])) {
     P.pedido_codigo pedido_codigo, termo, comprovante_endereco, data1, data2, data3,
     horario1, horario2, horario3, documento_foto
     FROM Pedido_adocao P, Adocao AD, Animal A, Usuario U, Ong O
-    WHERE P.pedido_codigo = AD.pedido_codigo AND AD.adocao_codigo = $adocao_codigo";
+    WHERE P.pedido_codigo = AD.pedido_codigo AND AD.adocao_codigo = $adocao_codigo
+    AND P.animal_codigo = A.animal_codigo";
     $adocoes = executarSelect($conexao, $sql);
     desconectarBanco($conexao, $sql);
     $adocao = $adocoes[0]; // salva em variavel local

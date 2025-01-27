@@ -53,6 +53,7 @@ if (isset($_GET["usuario_codigo"])) {
             </div>
         </div>
     </div>
+    <br><br><br>
 </main>
 <?php
 include "layout/_rodape.php";

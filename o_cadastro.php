@@ -13,16 +13,17 @@ include "layout/_a_navbar.php";
           <br>
           <h1 class="titulo2">Cadastre-se como ONG</h1>
           <hr>
-          <div class="fs-4 texto2">É uma nova ONG e precisa de ajuda na visibilidade do seu trabalho? Cadastre-se e ajude animais a encontrarem um lar! </div>
+          <div class="fs-4 texto2">É uma nova ONG e precisa de ajuda na visibilidade do seu trabalho? Cadastre-se e
+            ajude animais a encontrarem um lar! </div>
         </div>
       </div>
       <?php
       if (isset($_GET['cadastrado'])) {
-      ?>
+        ?>
         <div class="fs-4 card-body mensagem1">
           Cadastro realizado.
         </div>
-      <?php
+        <?php
       }
       ?>
     </div>
@@ -36,11 +37,13 @@ include "layout/_a_navbar.php";
         <form class="card-body fs-4" method="POST" action="o_cadastro.php">
           <div class="mb-3">
             <label for="email_ong" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email_ong" name="email_ong" placeholder="Insira o email de contato da instituição" required>
+            <input type="email" class="form-control" id="email_ong" name="email_ong"
+              placeholder="Insira o email de contato da instituição" required>
           </div>
           <div class="mb-3">
             <label for="nome_fantasia" class="form-label">Nome da Instituição</label>
-            <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia" placeholder="Apresente o nome da ONG" required>
+            <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia"
+              placeholder="Apresente o nome da ONG" required>
           </div>
           <div class="mb-3">
             <label for="ong_cnpj" class="form-label">CNPJ</label>
@@ -83,6 +86,8 @@ include "layout/_a_navbar.php";
               </select>
             </div>
           </div>
+          <a class="link_geral" href="u_cadastro.php">Cadastrar-se como Usuário</a>
+
       </div>
 
       <div class="col-6 ">
@@ -98,22 +103,22 @@ include "layout/_a_navbar.php";
           </div>
           <div class="mb-3">
             <label for="endereco" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua, quadra - bairro" required>
+            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua, quadra - bairro"
+              required>
           </div>
           <div class="mb-3">
             <label for="senha_ong" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha_ong" name="senha_ong" placeholder="Insira sua senha" required>
+            <input type="password" class="form-control" id="senha_ong" name="senha_ong" placeholder="Insira sua senha"
+              required>
           </div>
           <div class="mb-3">
             <label for="senha" class="form-label">Confirmar senha</label>
-            <input type="password" class="form-control" id="confirmacao_senha" name="confirmacao_senha" placeholder="Digite sua senha novamente" required>
+            <input type="password" class="form-control" id="confirmacao_senha" name="confirmacao_senha"
+              placeholder="Digite sua senha novamente" required>
+
           </div>
-          <a class="link_geral" href="u_cadastro.php">Cadastrar-se como Usuário</a>
-          <br>
           <a class="link_geral" href="login.php">Já possui uma conta? Clique aqui para entrar.</a>
           <div id="botao" mt-3>
-            <br>
-            <button type="submit" class="btn btn-laranja" name="cadastrar">Cadastrar</button>
           </div>
           <?php
           if (isset($_POST["cadastrar"])) {
@@ -133,11 +138,13 @@ include "layout/_a_navbar.php";
             echo "<script>window.location.href = 'o_cadastro.php?cadastrado=true'</script>";
           }
           ?>
+          <button type="submit" class="btn btn-laranja form-control" name="cadastrar">Cadastrar</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <br><br><br>
   <?php
   include "layout/_rodape.php";
   ?>

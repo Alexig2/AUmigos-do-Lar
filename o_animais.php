@@ -3,7 +3,7 @@ $titulo_pagina = "ONG - Animais";
 include "layout/_cabecalho.php";
 include "layout/_o_navbar.php";
 $conexao = conectarBanco("aumigos");
-$animais = executarSelect($conexao, "SELECT * FROM Animal");
+$animais = executarSelect($conexao, "SELECT * FROM Animal WHERE ong_codigo = $ong_codigo");
 desconectarBanco($conexao);
 ?>
 <br><br><br>
